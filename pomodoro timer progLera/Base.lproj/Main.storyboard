@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pomodoro_timer_progLera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37K-nn-8w7">
+                                <rect key="frame" x="116" y="114" width="182" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkj-k3-zF5">
+                                <rect key="frame" x="174.5" y="599" width="65" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtomRelax:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zoF-qw-rDl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmf-HR-Obt">
+                                <rect key="frame" x="174.5" y="223" width="65" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2gi-7A-AlA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fC5-Sc-C27">
+                                <rect key="frame" x="161.5" y="746" width="91" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelTimetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U8W-rn-9Ym"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C45-vo-nVc">
+                                <rect key="frame" x="114.5" y="490" width="185" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C45-vo-nVc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Iu-Tt-MkA"/>
+                            <constraint firstItem="Xmf-HR-Obt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="11h-JI-4fx"/>
+                            <constraint firstItem="37K-nn-8w7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dt0-4t-f4h"/>
+                            <constraint firstItem="fC5-Sc-C27" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JSk-fv-hos"/>
+                            <constraint firstItem="Xmf-HR-Obt" firstAttribute="top" secondItem="37K-nn-8w7" secondAttribute="bottom" constant="25" id="Pc7-n3-Hrc"/>
+                            <constraint firstItem="fC5-Sc-C27" firstAttribute="top" secondItem="mkj-k3-zF5" secondAttribute="bottom" constant="100" id="RAk-ek-oyy"/>
+                            <constraint firstItem="mkj-k3-zF5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XBn-m8-eYY"/>
+                            <constraint firstItem="mkj-k3-zF5" firstAttribute="top" secondItem="C45-vo-nVc" secondAttribute="bottom" constant="25" id="YWw-5S-ys1"/>
+                            <constraint firstItem="C45-vo-nVc" firstAttribute="top" secondItem="Xmf-HR-Obt" secondAttribute="bottom" constant="220" id="cKT-Yw-CB5"/>
+                            <constraint firstItem="Xmf-HR-Obt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eqM-LN-M4U"/>
+                            <constraint firstItem="37K-nn-8w7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kTN-xu-R8s"/>
+                            <constraint firstItem="C45-vo-nVc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mya-qd-F2l"/>
+                            <constraint firstItem="mkj-k3-zF5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pdm-v3-Bzz"/>
+                            <constraint firstItem="37K-nn-8w7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="xTx-bc-Yvv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fC5-Sc-C27" secondAttribute="bottom" constant="68" id="xob-jD-Ubq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="fC5-Sc-C27" id="o6h-JQ-sXn"/>
+                        <outlet property="startButtonRelax" destination="mkj-k3-zF5" id="Gin-eb-1AY"/>
+                        <outlet property="startButtonWork" destination="Xmf-HR-Obt" id="pRr-Ni-wo9"/>
+                        <outlet property="timeLableRelax" destination="C45-vo-nVc" id="kz9-dU-1QG"/>
+                        <outlet property="timeLableWork" destination="37K-nn-8w7" id="j8o-Ju-7Pr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="53.571428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
