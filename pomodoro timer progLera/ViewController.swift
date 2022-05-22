@@ -54,7 +54,7 @@ class ViewController: UIViewController {
                 if timeWork == 0 {
                     cancelTimerWork()
                     if !isTimerStartedRelax {
-//                        startTimerRelax()
+                    startTimerRelax()
                         isTimerStartedRelax = true
                         startButtonRelax.setTitle("Pause", for: .normal)
 
